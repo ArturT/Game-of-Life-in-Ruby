@@ -20,4 +20,13 @@ class Cell
     end
   end
   
+  # When two objects have the same pair x, y then they have the same hash_code.
+  def hash_code
+    prime = 31
+    result = 1
+    result = prime * result + x
+    result = prime * result + y
+    return result;
+  end
+  
 end

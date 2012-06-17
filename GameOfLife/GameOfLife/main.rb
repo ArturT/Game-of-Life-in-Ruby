@@ -18,6 +18,7 @@ puts c.inspect
 b = Board.new
 b.add_cell(2,3)
 b.add_cell(2,3)
+b.add_cell(3,2)
 b.add_cell(5,7)
 b.remove_cell(5,7)
 

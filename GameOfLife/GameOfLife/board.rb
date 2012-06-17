@@ -31,14 +31,16 @@ class Board
   # @param x
   # @param y
   def add_cell(x, y)
-    @current_state[@current_state.length] = (Cell.new(x, y))
+    cell = Cell.new(x, y)    
+    @current_state[cell.hash_code] = Cell.new(x, y)
   end
   
   # Remove cell from board.
   # @param x
   # @param y
   def remove_cell(x, y)
-    @current_state.delete_if {|key, value| value == Cell.new(x, y) }
+    #@current_state.delete_if {|key, value| value == Cell.new(x, y) }
+    @current_state.delete(Cell.new(x, y).hash_code)
   end
   
   def print_current_state
