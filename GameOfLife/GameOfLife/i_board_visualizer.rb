@@ -1,5 +1,5 @@
 # Interface to visual implementation of game.
-class IBoardVisualizer
+module IBoardVisualizer
   
   # Display current state of board on the screen.
   def display_current_state_of_board
