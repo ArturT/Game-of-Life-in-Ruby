@@ -1,7 +1,5 @@
-require './board'
-require './i_board_visualizer'
-require './board_console_visualizer'
-require './cell'
+require_relative 'board'
+require_relative 'board_console_visualizer'
 
 
 puts "Hello World"
@@ -23,7 +21,6 @@ b.add_cell(5,7)
 b.remove_cell(5,7)
 
 puts b.print_current_state
-
 
 
 

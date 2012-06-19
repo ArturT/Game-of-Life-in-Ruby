@@ -1,4 +1,5 @@
 require 'thread'
+require_relative 'cell'
 
 # Board. Place where game happens.
 class Board
@@ -43,8 +44,27 @@ class Board
     @current_state.delete(Cell.new(x, y).hash_code)
   end
   
+  # Print board as string
   def print_current_state
     @current_state.to_s
   end
+  
+  # Check is cell exist on board.
+  # @param x
+  # @param y
+  # @return boolean
+  def is_cell_exist(x, y)
+    #@current_state.contains(Cell.new(x, y))
+    #@current_state.any? {|k| k == (Cell.new(x, y)).hash_code}
+    @current_state.has_value?(Cell.new(x, y))
+  end
+  
+  # Return current amount of cells on board.
+  # @return int
+  def count_cells
+    @current_state.size
+  end
+  
+  
   
 end
