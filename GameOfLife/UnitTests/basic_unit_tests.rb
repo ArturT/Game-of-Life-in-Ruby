@@ -50,7 +50,7 @@ class BasicUnitTests < Test::Unit::TestCase
     b.add_cell(2, 3)
     b.next_state
 
-    assert_equal(b.is_cell_exist(2, 2))
+    assert_equal(true, b.is_cell_exist(2, 2))
 
     # test for three neighbours
     b = Board.new
@@ -60,7 +60,7 @@ class BasicUnitTests < Test::Unit::TestCase
     b.add_cell(3, 3)
     b.next_state
 
-    assert_equal(b.is_cell_exist(2, 2))
+    assert_equal(true, b.is_cell_exist(2, 2))
   end
   
   def test_should_living_cell_die_when_has_less_than_two_neighbours
